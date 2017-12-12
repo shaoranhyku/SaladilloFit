@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SaladilloFit"
+             x:Class="SaladilloFit.MainPage"
+             BackgroundColor="Orange">
+
+    <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+        <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Vertical">
+                <Label x:Name="lblUsuario" Text="Usuario" TextColor="White"/>
+                <StackLayout Orientation="Horizontal"  Spacing="40">
+                    <Entry x:Name="txtUsuario"
+                       Text="{Binding NombreUsuario, Mode=TwoWay}"
+                       HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label x:Name="lblContra" Text="Contraseña" TextColor="White"/>
+                <StackLayout Orientation="Horizontal" Spacing="40">
+                    <Entry x:Name="txtContra"
+                       Text="{Binding ContraUsuario, Mode=TwoWay}"
+                       IsPassword="true"
+                       HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="End">
+                <Button x:Name="btnEntrar" Text="Entrar" VerticalOptions="End"/>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Spacing="120">
+            <Label x:Name="lblError" Text="{Binding MensajeError}" TextColor="White" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

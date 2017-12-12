@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SaladilloFit.Views.AdminPage"
+             BackgroundColor="Orange">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="lblNombre" Text="Nombre" TextColor="White"/>
+                    <Entry x:Name="txtNombreDato" Text="{Binding DatoNombre, Mode=OneWayToSource}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="lblDNI" Text="DNI" TextColor="White"/>
+                    <Entry x:Name="txtDNIDato" Text="{Binding DatoDni, Mode=OneWayToSource}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="lblHorario" Text="Horario" TextColor="White"/>
+                    <Picker x:Name="txtHorarioDato" ItemsSource="{Binding ListaHorarios}"
+                            SelectedIndex="{Binding IndiceHorario, Mode=OneWayToSource}"/>
+                </StackLayout>
+                <Button x:Name="btnCambiarUsuario" Text="Cambiar Usuario"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="lblEdad" Text="Edad" TextColor="White"/>
+                    <Entry x:Name="txtEdadDato" Text="{Binding DatoEdad, Mode=OneWayToSource}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="lblAltura" Text="Altura" TextColor="White"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="txtAlturaDato" Text="{Binding DatoAltura, Mode=OneWayToSource}"/>
+                        <Label x:Name="lblAlturaUnidad" Text="cm"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="lblPeso" Text="Peso" TextColor="White"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="txtPesoDato" Text="{Binding DatoPeso, Mode=OneWayToSource}"/>
+                        <Label x:Name="lblPesoUnidad" Text="Kg"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="lblObjetivo" Text="Objetivo" TextColor="White"/>
+                    <Picker x:Name="txtObjetivoDato" ItemsSource="{Binding ListaObjetivos}"
+                            SelectedIndex="{Binding IndiceObjetivo, Mode=OneWayToSource}"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                <Button x:Name="btnAgregar" Text="Añadir"/>
+                <Label x:Name="lblMensajeError" Text="{Binding MensajeError}" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Label x:Name="lblUsuarios" Text="Usuarios" TextColor="White"/>
+                <ListView x:Name="lstUsuarios"
+                          ItemsSource="{Binding ListaUsuarios}"
+                          BackgroundColor="White"
+                          Margin="30">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Dni}"/>
+                                    <Label Text="{Binding Nombre}"/>
+                                    <Label Text="{Binding Horario}"/>
+                                    <Label Text="{Binding Edad}"/>
+                                    <Label Text="{Binding Altura}"/>
+                                    <Label Text="{Binding Peso}"/>
+                                    <Label Text="{Binding Imc}"/>
+                                    <Label Text="{Binding Objetivo}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

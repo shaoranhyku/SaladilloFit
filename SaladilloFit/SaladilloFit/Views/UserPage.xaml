@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SaladilloFit.Views.UserPage"
+             BackgroundColor="Orange">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="lblMensajeBienvenida" Text="{Binding MensajeBienvenida}" TextColor="White"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="lblDNI" Text="DNI" TextColor="White"/>
+                    <Label x:Name="lblDNIDato" Text="{Binding DatoDni}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="lblHorario" Text="Horario" TextColor="White"/>
+                    <Label x:Name="lblHorarioDato" Text="{Binding DatoHorario}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="lblObjetivo" Text="Objetivo" TextColor="White"/>
+                    <Label x:Name="lblObjetivoDato" Text="{Binding DatoObjetivo}"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10,0,0,0">
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="lblEdad" Text="Edad" TextColor="White"/>
+                    <Label x:Name="lblEdadDato" Text="{Binding DatoEdad}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="lblAltura" Text="Altura" TextColor="White"/>
+                    <Label x:Name="lblAlturaDato" Text="{Binding DatoAltura}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="lblPeso" Text="Peso" TextColor="White"/>
+                    <Label x:Name="lblPesoDato" Text="{Binding DatoPeso}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="lblIMC" Text="IMC" TextColor="White"/>
+                    <Label x:Name="lblIMCDato" Text="{Binding DatoImc}"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="btnCambiarUsuario" Text="Cambiar Usuario"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
