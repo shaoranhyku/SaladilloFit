@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['mcg_5fwinrt_5fsupported',['MCG_WINRT_SUPPORTED',['../_adapters_8g_8cs.html#ae0da9ac504ad84eb2dac5f805786b255',1,'MCG_WINRT_SUPPORTED():&#160;Adapters.g.cs'],['../_assembly_info_8g_8cs.html#ae0da9ac504ad84eb2dac5f805786b255',1,'MCG_WINRT_SUPPORTED():&#160;AssemblyInfo.g.cs'],['../_data_8g_8cs.html#ae0da9ac504ad84eb2dac5f805786b255',1,'MCG_WINRT_SUPPORTED():&#160;Data.g.cs'],['../_helpers_8g_8cs.html#ae0da9ac504ad84eb2dac5f805786b255',1,'MCG_WINRT_SUPPORTED():&#160;Helpers.g.cs'],['../_impl_types_8g_8cs.html#ae0da9ac504ad84eb2dac5f805786b255',1,'MCG_WINRT_SUPPORTED():&#160;ImplTypes.g.cs'],['../_p_invoke_8g_8cs.html#ae0da9ac504ad84eb2dac5f805786b255',1,'MCG_WINRT_SUPPORTED():&#160;PInvoke.g.cs'],['../_safe_types_8g_8cs.html#ae0da9ac504ad84eb2dac5f805786b255',1,'MCG_WINRT_SUPPORTED():&#160;SafeTypes.g.cs'],['../_shared_stubs_8g_8cs.html#ae0da9ac504ad84eb2dac5f805786b255',1,'MCG_WINRT_SUPPORTED():&#160;SharedStubs.g.cs']]]
+];

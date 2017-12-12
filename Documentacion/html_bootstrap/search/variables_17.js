@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['zname',['zName',['../struct_s_q_lite_p_c_l_1_1_s_q_lite3_provider__e__sqlite3__sqlite3__vfs_____s_q_lite_p_c_l_raw__p89339f4ba50adf2ea32e6bc7fa81430e.html#a9b4f7e369570a99d51a4c0d71bd274d3',1,'SQLitePCL.SQLite3Provider_e_sqlite3_sqlite3_vfs__SQLitePCLRaw_provider_e_sqlite3__Impl.UnsafeType.zName()'],['../struct_s_q_lite_p_c_l_1_1_s_q_lite3_provider__e__sqlite3__sqlite3__vfs_____s_q_lite_p_c_l_raw__provider__e__sqlite3.html#a7b7fcb5124ceea245064f7d8fc4cf546',1,'SQLitePCL.SQLite3Provider_e_sqlite3_sqlite3_vfs__SQLitePCLRaw_provider_e_sqlite3.zName()']]]
+];

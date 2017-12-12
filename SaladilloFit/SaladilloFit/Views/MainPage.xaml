@@ -5,32 +5,67 @@
              x:Class="SaladilloFit.MainPage"
              BackgroundColor="Orange">
 
-    <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
-        <StackLayout Orientation="Horizontal">
-            <StackLayout Orientation="Vertical">
-                <Label x:Name="lblUsuario" Text="Usuario" TextColor="White"/>
-                <StackLayout Orientation="Horizontal"  Spacing="40">
-                    <Entry x:Name="txtUsuario"
-                       Text="{Binding NombreUsuario, Mode=TwoWay}"
-                       HorizontalOptions="StartAndExpand"/>
+    <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="StartAndExpand"
+                 Margin="300, 0, 300, 0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="150" />
+                </Grid.ColumnDefinitions>
+                <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150" />
+                        </Grid.ColumnDefinitions>
+                        <Label x:Name="lblUsuario" Text="Usuario" TextColor="White"
+                               Grid.Row="0" Grid.Column="0"/>
+                        <Entry x:Name="txtUsuario"
+                               Text="{Binding NombreUsuario, Mode=TwoWay}"
+                               Grid.Row="1" Grid.Column="0"/>
+                    </Grid>
                 </StackLayout>
-            </StackLayout>
-            <StackLayout Orientation="Vertical">
-                <Label x:Name="lblContra" Text="Contraseña" TextColor="White"/>
-                <StackLayout Orientation="Horizontal" Spacing="40">
-                    <Entry x:Name="txtContra"
-                       Text="{Binding ContraUsuario, Mode=TwoWay}"
-                       IsPassword="true"
-                       HorizontalOptions="StartAndExpand"/>
+                <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="150" />
+                        </Grid.ColumnDefinitions>
+                        <Label x:Name="lblContra" Text="Contraseña" TextColor="White"
+                               Grid.Row="0" Grid.Column="0"/>
+                        <Entry x:Name="txtContra"
+                               Text="{Binding ContraUsuario, Mode=TwoWay}"
+                               IsPassword="true"
+                               Grid.Row="1" Grid.Column="0"/>
+                        <Button x:Name="btnEntrar" Text="Entrar"
+                                Grid.Row="1" Grid.Column="1"/>
+                    </Grid>
                 </StackLayout>
-            </StackLayout>
-            <StackLayout Orientation="Vertical" VerticalOptions="End">
-                <Button x:Name="btnEntrar" Text="Entrar" VerticalOptions="End"/>
-            </StackLayout>
+            </Grid>
         </StackLayout>
-        <StackLayout Orientation="Horizontal" Spacing="120">
-            <Label x:Name="lblError" Text="{Binding MensajeError}" TextColor="White" HorizontalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="0">
+            <Label x:Name="lblError" Text="{Binding MensajeError}" HorizontalOptions="StartAndExpand" TextColor="White"/>
         </StackLayout>
+    </Grid>
     </StackLayout>
 
 </ContentPage>
